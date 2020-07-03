@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "kernai app in electron",
   "main": "main.boot.js",
-    "scripts": {
-        "start_babel": "npm run babel && electron .",
-        "start": "electron .",
-        "babel": "babel ./src --out-dir ./dist --copy-files",
-        "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": {
+    "start_babel": "npm run babel && electron .",
+    "start": "electron .",
+    "babel": "babel ./src --out-dir ./dist --copy-files",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +21,7 @@
     "electron": "^9.0.5"
   },
   "dependencies": {
+    "antd": "^4.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
