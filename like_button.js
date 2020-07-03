@@ -2,6 +2,9 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const {
+    Table: ant_table,
+    Tag,
+    Space,
     Tabs: ant_tabs,
     DatePicker: ant_date_picker,
     TimePicker: ant_time_picker,
@@ -16,6 +19,41 @@ function callback(key){
     console.log(key);
 }
 
+
+const dataForTable = [
+    {
+        key: "1",
+        name: "Mike",
+        age: 32,
+        address: "19 Downing Street",
+    },
+    {
+        key: "2",
+        name: "Fred",
+        age: 2,
+        address: "12 Milhouse Street",
+    }
+];
+
+const columns = [
+    {
+        title: 'Name',
+        dataIndex: 'name',
+        key: 'name',
+    },
+    {
+        title: 'Age',
+        dataIndex: 'age',
+        key: 'age',
+    },
+    {
+        title: 'Address',
+        dataIndex: 'address',
+        key: 'address',
+    },
+];
+
+
 const {tab_pane} = ant_tabs;
 const e = React.createElement;
 
@@ -26,7 +64,8 @@ const timePicker = e(ant_time_picker, { },  );
 const datePicker = e(ant_date_picker, { },  );
 const responseHeada = e('h1', {}, 'the hell');
 const responseBodda = e('h2', { style: { color: "red" }}, 'is goan on');
-const buttonResponse = e('div', {}, [responseHeada, responseBodda,tab, datePicker, timePicker]);
+const table = e(ant_table, {dataSource: {dataForTable}, columns:{columns}});
+const buttonResponse = e('div', {}, [responseHeada, responseBodda, tab, datePicker, timePicker]);
 
 
 class LikeButton extends React.Component {
