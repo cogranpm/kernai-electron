@@ -14,7 +14,7 @@ const {
     dashed,
     defaultActiveKey
 } = require('antd');
-
+const TabPane = Tabs.TabPane;
 
 
 const dataSource = [
@@ -50,8 +50,14 @@ const columns = [
     },
 ];
 
+const panes = [
+    { title: 'Tab 1', content: 'Content of Tab 1', key: '1', closable: true },
+    { title: 'Tab 2', content: 'Content of Tab 2', key: '2' },
+];
+
 
 const e = React.createElement;
+const table = <Table dataSource={dataSource} columns={columns} />;
 
 class LikeButton extends React.Component {
     constructor(props) {
@@ -61,7 +67,12 @@ class LikeButton extends React.Component {
 
     render() {
         if (this.state.liked) {
-            return <Table dataSource={dataSource} columns={columns} />;
+            return (<Tabs>
+                      <TabPane tab="Shelf" key="shelf" type="editable-card" closeable="true"><Table dataSource={dataSource} columns={columns} /></TabPane>
+                      <TabPane tab="Subject" key="subject" closeable="true">Subject Stuff</TabPane>
+                    </Tabs>);
+            //                    //this.panes.map(pane => <TabPane tab={pane.title}, key={pane.key}, closeable={pane.closable}>{pane.content}</TabPane>)
+            //return table;
             //return <Button>Vagrants</Button>;
         }
 
