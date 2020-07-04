@@ -3,18 +3,17 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const {
+    Button,
     Table,
     Tag,
     Space,
     Tabs,
     DatePicker,
     TimePicker,
-    Button,
     primary,
     dashed,
     defaultActiveKey
 } = require('antd');
-
 
 
 
@@ -62,8 +61,8 @@ class LikeButton extends React.Component {
 
     render() {
         if (this.state.liked) {
-            //return 'You liked this.';
             return <Table dataSource={dataSource} columns={columns} />;
+            //return <Button>Vagrants</Button>;
         }
 
         return (
