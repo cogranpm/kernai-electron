@@ -75,12 +75,13 @@ class LikeButton extends React.Component {
             //return table;
             //return <Button>Vagrants</Button>;
         }
-
+        else{
         return (
             <button onClick={() => this.setState({liked:true})}>
                 Like - using jsx
             </button>
         )
+        }
     }
 }
 
