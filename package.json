@@ -6,9 +6,9 @@
   "scripts": {
     "start": "npm run sucrase && electron .",
     "start-nojsx": "electron .",
-      "babel": "babel ./src --out-dir ./dist --copy-files",
-      "sucrase": "sucrase ./src -d ./dist --transforms jsx",
-      "test": "echo \"Error: no test specified\" && exit 1"
+    "babel": "babel ./src --out-dir ./dist --copy-files",
+    "sucrase": "sucrase ./src -d ./dist --transforms jsx",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +26,7 @@
   "dependencies": {
     "antd": "^4.4.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-split": "^2.0.9"
   }
 }
