@@ -29,7 +29,47 @@ const sampleData = [
 const e = React.createElement;
 
 
+class HTMLLearnings extends React.Component {
 
+  render() {
+    return (
+      <section id="htmlSection"> 
+      <nav>
+          <ul>
+              <li><a href="#">Basic Tags</a></li>
+              <li><a href="#">Semantic Web</a></li>
+          </ul>
+      </nav>            
+
+      <section id="basicTags">
+        <article>
+          Note: imagine this stuff has the opening and closing tags 
+          <div>
+            !DOCTYPE html <br/>
+            html <br/>
+            head <br/>
+            title <br/>
+            body <br/>
+          </div>
+        </article>
+      </section>
+
+      <section id="description">
+          <article id="semanticwebintro">
+              <section>
+                  use sections and articles, better conveys meaning than just divs and spans
+                  use nav tag to surround navigation stuff
+              </section>
+              <section>
+                  notes
+              </section>
+          </article>
+      </section>
+      </section>
+
+    );
+  }
+}
 
 
 class ToolbarHeader extends React.Component {
@@ -62,6 +102,9 @@ class ShelfContainer extends React.Component {
 
       const splitPane = (
         <Tabs>
+          <TabPane tab="HTML" key="html">
+            <HTMLLearnings/>
+          </TabPane>
           <TabPane tab="Shelf" key="shelf">
           <div className="split" id="shelf_pane">
           <Row>

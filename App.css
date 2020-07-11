@@ -1,3 +1,10 @@
+div {
+    white-space: pre-wrap;
+}
+
+
+/* following stuff is to support tabs or sliders */
+
 .Resizer {
     background: #000;
     opacity: .4;
