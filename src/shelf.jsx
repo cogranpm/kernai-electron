@@ -9,8 +9,10 @@ const {
     Row,
     Col,
     Divider,
-    flex
+    flex,
+    Tabs
 } = require('antd');
+const TabPane = Tabs.TabPane;
 
 const Split = require('react-split');
 
@@ -19,7 +21,9 @@ const e = React.createElement;
 
 
 const splitPane = (
-    <Split  sizes={[25, 75]}
+    <Tabs>
+      <TabPane tab="Shelf" key="shelf">
+        <Split  sizes={[25, 75]}
             minSize={100}
             expandToMin={false}
             gutterSize={10}
@@ -28,7 +32,8 @@ const splitPane = (
             dragInterval={1}
             direction="horizontal"
             cursor="col-resize"
-    >
+            >
+      <div className="split" id="shelf_pane">
       <Row>
         <Col><button>shelf</button></Col>
         <Col flex={3}>
@@ -40,8 +45,16 @@ const splitPane = (
           </Row>
         </Col>
       </Row>
-      <div>hello thar</div>
+      </div>
+      <div className="split" id="subject_pane">
+        <div>hello thar</div>
+      </div>
     </Split>
+      </TabPane>
+      <TabPane tab="Home" key="home">
+        <div><h1>Home Screen</h1></div>
+      </TabPane>
+    </Tabs>
 );
 
 
