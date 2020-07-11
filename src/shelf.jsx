@@ -45,13 +45,69 @@ class HTMLLearnings extends React.Component {
         <article>
           Note: imagine this stuff has the opening and closing tags 
           <div>
+          <h2>Basic Elements</h2>
             !DOCTYPE html <br/>
             html <br/>
             head <br/>
             title <br/>
             body <br/>
+            meta name= content= <br/>
+            link href= rel=stylesheet, shortcut icon <br/>
+            script src= type=text/javascript <br/>
+            style type=text/css
           </div>
         </article>
+        <article id="blockElements">
+          <h2>Block Elements</h2>
+          div <br/>
+          p <br/>
+          address <br/>
+          article <br/>
+          aside <br/>
+          blockquote <br/>
+          fieldset <br/>
+          figcaption <br/>
+          figure <br/>
+          footer <br/>
+          form <br/>
+          h1 -> 6
+          header <br/>
+          hgroup <br/>
+          legend <br/>
+          li <br/>
+          menu <br/>
+          nav <br/>
+          table <br/>
+          ul <br/>
+          section <br/>
+        </article>
+        <article id="inlineElements">
+          <h2>Inline Elements</h2>
+          a <br/>
+          abbr <br/>
+          canvas <br/>
+          cite <br/>
+          datagrid <br/>
+          datalist <br/>
+          details <br/>
+          em <br/>
+          input <br/>
+          keygen  <br/>
+          label  <br/>
+          link <br/>
+          mark <br/>
+          map <br/>
+          meter <br/>
+          output <br/>
+          progress <br/>
+          span <br/>
+          summary <br/>
+          textarea <br/>
+          time <br/>
+          wbr <br/>
+        </article>
+
+
       </section>
 
       <section id="description">
