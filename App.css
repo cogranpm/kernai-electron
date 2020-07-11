@@ -2,6 +2,11 @@ div {
     white-space: pre-wrap;
 }
 
+article {
+    padding: 10px;
+    margin: 5px;
+}
+
 
 /* following stuff is to support tabs or sliders */
 

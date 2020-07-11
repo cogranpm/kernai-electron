@@ -106,6 +106,52 @@ class HTMLLearnings extends React.Component {
           time <br/>
           wbr <br/>
         </article>
+        <article id="forms">
+          <h2>forms</h2>
+          form action= <br/>
+          input <br/>
+          type= ... <br/>
+          text,submit,date,time,month,week,datetime-local,number[min=max=step=] <br/>
+          range, search, email, url, color<br/>
+          name= value= <br/>
+          <h3>Example:</h3>
+          <form>
+            <fieldset>
+              <label>Text</label><input type="text" name="text"/> <br/>
+              <label>date</label><input type="date" name="date"/> <br/>
+              <label>time</label><input type="time" name="time"/> <br/>
+              <label>month</label><input type="month" name="month"/> <br/>
+              <label>week</label><input type="week" name="week"/> <br/>
+              <label>datetime-local</label><input type="datetime-local" name="datetime-local"/> <br/>
+              <label>number</label><input type="number" name="number"/> <br/>
+              <label>range</label><input type="range" name="range"/> <br/>
+              <label>search</label><input type="search" name="search"/> <br/>
+              <label>email</label><input type="email" name="email"/> <br/>
+              <label>url</label><input type="url" name="url"/> <br/>
+              <label>color</label><input type="color" name="color"/> <br/>
+              <label htmlFor="datalist">Datalist</label>
+              <input name="datalist" id="datalist" list="mfg"/>
+                <datalist id="mfg">
+                <option value="Ford" />
+                <option value="Toyota" />
+                <option value="Ferrari" />
+                </datalist>
+
+              <label>Submit</label><input type="submit" name="submit"/> <br/>
+            </fieldset>
+          </form>
+        </article>
+        <article id="applicationTags">
+          <h2>Application Tags</h2>
+          <canvas></canvas> <br/>
+          <menu>
+            {/* <command type="command">Save All</command>
+            <command type="checkbox">Checkbox</command> */}
+          </menu> <br/>
+          <keygen name="myFormKey" form="newUserInput"/>
+ 
+
+        </article>
 
 
       </section>
