@@ -27,6 +27,8 @@
     "antd": "^4.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-split": "^2.0.9"
+    "react-split-pane": "^0.1.91",
+    "react-splitter-layout": "^4.0.0",
+    "react-style-proptype": "^3.2.2"
   }
 }
