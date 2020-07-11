@@ -17,6 +17,14 @@ const TabPane = Tabs.TabPane;
 
 const SplitterLayout = require('react-splitter-layout').default;
 const SplitPane = require('react-split-pane').default;
+const sampleData = [
+  {category: "Sporting Goods", price: "$49.99", stocked: true, name: "Football"},
+  {category: "Sporting Goods", price: "$9.99", stocked: true, name: "Baseball"},
+  {category: "Sporting Goods", price: "$29.99", stocked: false, name: "Basketball"},
+  {category: "Electronics", price: "$99.99", stocked: true, name: "iPod Touch"},
+  {category: "Electronics", price: "$399.99", stocked: false, name: "iPhone 5"},
+  {category: "Electronics", price: "$199.99", stocked: true, name: "Nexus 7"}
+];
 
 const e = React.createElement;
 
@@ -29,10 +37,10 @@ const splitPane = (
         <Col><button>shelf</button></Col>
         <Col flex={3}>
           <Row>
-            <Col><button>subject</button></Col>
+            <Col><button>changes</button></Col>
           </Row>
           <Row>
-            <Col><button>publication</button></Col>
+            <Col><button>knowledgebase</button></Col>
           </Row>
         </Col>
       </Row>
