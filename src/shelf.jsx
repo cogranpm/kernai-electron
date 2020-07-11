@@ -29,87 +29,105 @@ const sampleData = [
 const e = React.createElement;
 
 
-const splitPane = (
-    <Tabs>
-      <TabPane tab="Shelf" key="shelf">
-      <div className="split" id="shelf_pane">
-      <Row>
-        <Col><button>shelf</button></Col>
-        <Col flex={3}>
-          <Row>
-            <Col><button>changes</button></Col>
-          </Row>
-          <Row>
-            <Col><button>knowledgebase</button></Col>
-          </Row>
-        </Col>
-      </Row>
-      </div>
-      <div className="split" id="subject_pane">
-        <div>hello thar</div>
-      </div>
-      </TabPane>
-      <TabPane tab="Home" key="home">
-        <div><h1>Home Screen</h1></div>
-        {/* <SplitPane split="vertical"> */}
-        {/*   <h1>shite</h1> */}
-        {/*   <h2>shoote</h2> */}
-        {/* </SplitPane> */}
 
-        <SplitterLayout>
-          <div>
-            <Row>
-              <Col><button>shelf</button></Col>
-              <Col flex={3}>
-                <Row>
-                  <Col><button>subject</button></Col>
-                </Row>
-                <Row>
-                  <Col><button>publication</button></Col>
-                </Row>
-              </Col>
-            </Row>
 
-          </div>
-          <div>
-            <Row>
-              <Col><button>shelf</button></Col>
-              <Col flex={3}>
-                <Row>
-                  <Col><button>subject</button></Col>
-                </Row>
-                <Row>
-                  <Col><button>publication</button></Col>
-                </Row>
-              </Col>
-            </Row>
 
-          </div>
-        </SplitterLayout>
-      </TabPane>
-    </Tabs>
-);
+class ToolbarHeader extends React.Component {
 
+  render() {
+    const title = this.props.title;
+    return (
+      <div><h1>{title}</h1></div>
+    )
+  }
+
+}
 
 
 class ShelfContainer extends React.Component {
 
+  constructor(props){
+    super(props);
+  }
+
+  componentDidMount(){
+    console.log("Shelf Container did mount");
+  }
+
+  componentWillMount(){
+    console.log("Shelf Container did unmount");
+  }
+
     render() {
+
+      const splitPane = (
+        <Tabs>
+          <TabPane tab="Shelf" key="shelf">
+          <div className="split" id="shelf_pane">
+          <Row>
+            <Col><ToolbarHeader/></Col>
+            <Col flex={3}>
+              <Row>
+                <Col><button>changes</button></Col>
+              </Row>
+              <Row>
+                <Col><button>knowledgebase</button></Col>
+              </Row>
+            </Col>
+          </Row>
+          </div>
+          <div className="split" id="subject_pane">
+            <div>hello thar</div>
+          </div>
+          </TabPane>
+          <TabPane tab="Home" key="home">
+            <div><h1>Home Screen</h1></div>
+            {/* <SplitPane split="vertical"> */}
+            {/*   <h1>shite</h1> */}
+            {/*   <h2>shoote</h2> */}
+            {/* </SplitPane> */}
+    
+            <SplitterLayout>
+              <div>
+                <Row>
+                  <Col><button>shelf</button></Col>
+                  <Col flex={3}>
+                    <Row>
+                      <Col><button>subject</button></Col>
+                    </Row>
+                    <Row>
+                      <Col><button>publication</button></Col>
+                    </Row>
+                  </Col>
+                </Row>
+    
+              </div>
+              <div>
+                <Row>
+                  <Col><button>shelf</button></Col>
+                  <Col flex={3}>
+                    <Row>
+                      <Col><button>subject</button></Col>
+                    </Row>
+                    <Row>
+                      <Col><button>publication</button></Col>
+                    </Row>
+                  </Col>
+                </Row>
+    
+              </div>
+            </SplitterLayout>
+          </TabPane>
+        </Tabs>
+    );
+    
+
         return (
             splitPane
         );
     }
 }
 
-class ShelfHeader extends React.Component {
-
-  render() {
-    return (
-      <div><h1>header</h1></div>
-    )
-  }
-
-}
 
 
 const domContainer = document.querySelector('#main_container');
