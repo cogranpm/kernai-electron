@@ -148,7 +148,7 @@ class HTMLLearnings extends React.Component {
             {/* <command type="command">Save All</command>
             <command type="checkbox">Checkbox</command> */}
           </menu> <br/>
-          <keygen name="myFormKey" form="newUserInput"/>
+
  
 
         </article>
