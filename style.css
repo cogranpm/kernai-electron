@@ -1,14 +1,50 @@
+/* universal selector */
+* {
+    margin: 0;
+    padding: 0;
+        /* border-box considered a best practice, width includes margins and padding */
+    box-sizing: border-box;
+  }
+
 body {
+    /* sets up the base font size which impacts em unit of measure */
     font-size: 12px;
     padding: 8px;
+    margin: 5px;
+    background-color: #B2D6FF;
+}
+
+/* this will get us the whole thing centered */
+.page {
+    width: 900px;
+    margin: 0 auto;
 }
 
 div {
     white-space: pre-wrap;
 }
 
-article {
-    padding: 10px;
-    margin: 5px;
+.frm {
+    
+    background-color: #B2D6FF;
+    border: 1px solid greenyellow;
+    display: flex;
+    justify-content: space-evenly;
 }
+
+.invisible {
+    padding-top: 1px;
+}
+
+/* multiple element selection */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Arial", "Helvetica", sans-serif;
+}
+
+label {
+    padding: 2px;    
+}
+
+
+
 

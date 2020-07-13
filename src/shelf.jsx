@@ -80,6 +80,21 @@ class HTMLLearnings extends React.Component {
           table <br/>
           ul <br/>
           section <br/>
+
+          <h3>unordered lists</h3>
+          <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Jackfruit</li>
+          </ul>
+
+          <h3>ordered lists</h3>
+          <ol>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Jackfruit</li>
+          </ol>
+          
         </article>
         <article id="inlineElements">
           <h2>Inline Elements</h2>
@@ -90,7 +105,7 @@ class HTMLLearnings extends React.Component {
           datagrid <br/>
           datalist <br/>
           details <br/>
-          em <br/>
+          em (for emphasis <br/>
           input <br/>
           keygen  <br/>
           label  <br/>
@@ -115,31 +130,63 @@ class HTMLLearnings extends React.Component {
           range, search, email, url, color<br/>
           name= value= <br/>
           <h3>Example:</h3>
+          <h2>First, an invisable div: div style= padding-top:1px</h2>
+          <div className="invisible"/>
+          <div className="frm">
           <form>
             <fieldset>
-              <label>Text</label><input type="text" name="text"/> <br/>
-              <label>date</label><input type="date" name="date"/> <br/>
-              <label>time</label><input type="time" name="time"/> <br/>
-              <label>month</label><input type="month" name="month"/> <br/>
-              <label>week</label><input type="week" name="week"/> <br/>
-              <label>datetime-local</label><input type="datetime-local" name="datetime-local"/> <br/>
-              <label>number</label><input type="number" name="number"/> <br/>
-              <label>range</label><input type="range" name="range"/> <br/>
-              <label>search</label><input type="search" name="search"/> <br/>
-              <label>email</label><input type="email" name="email"/> <br/>
-              <label>url</label><input type="url" name="url"/> <br/>
-              <label>color</label><input type="color" name="color"/> <br/>
-              <label htmlFor="datalist">Datalist</label>
-              <input name="datalist" id="datalist" list="mfg"/>
-                <datalist id="mfg">
-                <option value="Ford" />
-                <option value="Toyota" />
-                <option value="Ferrari" />
-                </datalist>
+              <div><label>Text</label><input type="text" name="text"/></div>
+              <div>
+                <label>date</label><input type="date" name="date"/> 
+              </div>
+              <div>
+                <label>time</label><input type="time" name="time"/>
+              </div>
+              <div>
+                <label>month</label><input type="month" name="month"/>
+              </div>
+              <div>
+                <label>week</label><input type="week" name="week"/>
+              </div>
+              <div>
+                <label>datetime-local</label><input type="datetime-local" name="datetime-local"/>               
+              </div>
+              <div>
+                <label>number</label><input type="number" name="number"/> 
+              </div>
+              <div>
+                <label>range</label><input type="range" name="range"/> 
+              </div>
+              <div>
+                <label>search</label><input type="search" name="search"/> 
+              </div>
+              <div>
+                <label>email</label><input type="email" name="email"/> 
+              </div>
+              <div>
+                <label>url</label><input type="url" name="url"/> 
+              </div>
+              <div>
+                <label>color</label><input type="color" name="color"/>
+              </div>
+              <div>
+                <label htmlFor="datalist">Datalist</label>
+              </div>
+              <div>
+                <input name="datalist" id="datalist" list="mfg"/>
+                  <datalist id="mfg">
+                  <option value="Ford" />
+                  <option value="Toyota" />
+                  <option value="Ferrari" />
+                  </datalist>
+              </div>
 
-              <label>Submit</label><input type="submit" name="submit"/> <br/>
+              <div>
+                <label>Submit</label><input type="submit" name="submit"></input>
+              </div>
             </fieldset>
           </form>
+          </div>
         </article>
         <article id="applicationTags">
           <h2>Application Tags</h2>
