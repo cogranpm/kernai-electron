@@ -13,6 +13,7 @@ const {
     Tabs
 } = require('antd');
 const TabPane = Tabs.TabPane;
+const JSLearnings = require('./javascript_learnings')
 
 
 const SplitterLayout = require('react-splitter-layout').default;
