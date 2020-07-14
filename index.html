@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Kernai</title>
-        <base href="./">
-        <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
-        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
-        <!-- <link rel="stylesheet" type="text/css" href="splitter.css" /> -->
-        <link rel="stylesheet" type="text/css" href="node_modules/antd/dist/antd.css" />
-        <link rel="stylesheet" type="text/css" href="node_modules/react-splitter-layout/lib/index.css" />
-    </head>
-    <body>
-         <div class="page"> 
-        <!-- <h1>Hello World!</h1>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kernai</title>
+    <base href="./">
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="splitter.css" /> -->
+    <link rel="stylesheet" type="text/css" href="node_modules/antd/dist/antd.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/react-splitter-layout/lib/index.css" />
+</head>
+
+<body>
+    <div class="page">
+        <!-- 
         We are using node <script>document.write(process.versions.node)</script>,
         Chrome <script>document.write(process.versions.chrome)</script>,
         and Electron <script>document.write(process.versions.electron)</script>. -->
-            <header>
-                <hgroup>
-                    <h1>Learnings</h1>
-                </hgroup>
-
-            </header>
-
-
-
+        <h1>Learnings</h1>
         <div id="main_container"></div>
         <!-- <div id="like_button_container"></div> -->
         <!-- IF USING JSX HERE IS HOW TO DO BABEL COMPILE -->
@@ -35,15 +29,10 @@
         <script src="./dist/shelf.js"></script>
         <!-- <script src="./dist/like_button.js"></script> -->
         <!-- <script src="like_button.js"></script>  -->
-        
-
         <footer>
             <p>could be something here</p>
         </footer>
     </div>
-    </body>
+</body>
+
 </html>
-
-
-
-

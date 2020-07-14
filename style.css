@@ -14,14 +14,21 @@ body {
     background-color: #B2D6FF;
 }
 
-/* this will get us the whole thing centered */
+/* this will get us the whole thing centered 
 .page {
     width: 900px;
     margin: 0 auto;
 }
+*/
 
 div {
     white-space: pre-wrap;
+}
+
+header {
+    background-color: grey;
+    padding: 0;
+    margin: 0;
 }
 
 .frm {
