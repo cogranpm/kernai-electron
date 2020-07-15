@@ -53,6 +53,8 @@ class Encapsulation extends React.Component {
         circle.radius;
         `
 
+
+
         return (
             <div>
             <div>Javascript</div>
@@ -133,6 +135,17 @@ class JSLearnings extends React.Component {
             fish.displayType();
         `
 
+        const enhanced_oject_literal = `
+        var someObj = {
+            __proto__: theProtoObj,
+            handler,
+            toString(){
+                return super.toString();
+            },
+            ['prop_' + (() => 42)() ]: 42
+        };
+    `
+
 
         return (
             <Collapse defaultActiveKey={['1']}>
@@ -173,6 +186,14 @@ class JSLearnings extends React.Component {
                             which defines the built in stuff
                         </p>
                         <p>{object_create}</p>
+                        <h3>enhanced object literal</h3>
+                        <ul>
+                            <li>setting proto type</li>
+                            <li>skip property name</li>
+                            <li>methods</li>
+                            <li>computed property names</li> 
+                        </ul>
+                        <p>{enhanced_oject_literal}</p>
                     </div>
                 </Panel>
             </Collapse>
