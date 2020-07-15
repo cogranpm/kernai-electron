@@ -52,6 +52,20 @@ class ControlFlow extends React.Component {
 
         `
 
+        const user_exception = `
+            function UserException(message){
+                this.message = message;
+                this.name = 'UserException';
+            }
+
+            //pretty string
+            UserException.prototype.toString = function(){
+                return this.name + this.message;
+            }
+
+            throw new UserException('value to high');
+        `
+
         return (
             <div>
                 <h3>Block Statement</h3>
@@ -82,6 +96,10 @@ class ControlFlow extends React.Component {
                 </ul>
                 <p>{throw_generic}</p>
                 <p>{handle_error_types}</p>
+                <p>throw expression;</p>
+                <h4>User Defined Exception</h4>
+                <p>{user_exception}</p>
+
             </div>
         )
     }
