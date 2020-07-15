@@ -30,6 +30,28 @@ class ControlFlow extends React.Component {
             }
         `
 
+        const throw_generic = `
+            try {
+                throw new Error('Message');
+            } catch(e){
+                console.error(e.name + e.message);
+            }
+
+        `
+
+        const handle_error_types = `
+            try {
+                foo.bar();
+            } catch (e) {
+                if (e instanceof EvalError){
+                    console.error(e.message)
+                } else if (e instanceof RangeError) {
+                    console.error(e.message)
+                }
+            }
+
+        `
+
         return (
             <div>
                 <h3>Block Statement</h3>
@@ -46,6 +68,20 @@ class ControlFlow extends React.Component {
                 </ul>
                 <h3>Switch</h3>
                 <p>{switch_statement}</p>
+                <h3>Exceptions</h3>
+                <h4>Error objects</h4>
+                <ul>
+                    <li>EvalError</li>
+                    <li>Internal Error</li>
+                    <li>RangeError</li>
+                    <li>ReferenceError</li>
+                    <li>SyntaxError</li>
+                    <li>TypeError</li>
+                    <li>URIError</li>
+                    <li>Error</li>
+                </ul>
+                <p>{throw_generic}</p>
+                <p>{handle_error_types}</p>
             </div>
         )
     }
