@@ -71,6 +71,7 @@ class Functions extends React.Component{
                 </ul>
                 <h3>Function Objects Examples</h3>
                 <p>{function_object_examples}</p>
+                <p>what's next</p>
             </div>
         );
     }
