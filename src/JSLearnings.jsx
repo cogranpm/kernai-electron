@@ -24,6 +24,30 @@ class Functions extends React.Component{
             console.log(factorial(3))
         `
 
+        const function_object_examples = `
+            var x = 10;
+
+
+            function createFunction1(){
+                var x = 20;
+                return new Function('return x');
+                // the returned function has NO access to closed over vars when called
+            }
+        
+            function createFunction2(){
+                var x = 20;
+                function f(){
+                    return x;
+                }
+                return f; //inner func CAN access closed over variables
+            }
+        
+            var f1 = createFunction1();
+            console.log(f1());
+            var f2 = createFunction2();
+            console.log(f2());
+        `
+
         return (
             <div>
                 <h2>Functions</h2>
@@ -32,6 +56,21 @@ class Functions extends React.Component{
                 <p>{basic_function}</p>
                 <h3>Function expressions</h3>
                 <p>{function_expression}</p>
+                <p>Did you know? Functions are hoisted, but not declarations</p>
+                <p>functions are also objects and have methods and properties</p>
+                <ul>
+                    <li>constructor Function</li>
+                    <li>arguments</li>
+                    <li>caller</li>
+                    <li>length</li>
+                    <li>name</li>
+                    <li>apply(thisArg, [args])</li>
+                    <li>bind(thisArg, [args])</li>
+                    <li>call(thisArg, [args])</li>
+                    <li>toString()</li>
+                </ul>
+                <h3>Function Objects Examples</h3>
+                <p>{function_object_examples}</p>
             </div>
         );
     }
