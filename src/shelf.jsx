@@ -16,6 +16,7 @@ const TabPane = Tabs.TabPane;
 //seems weird to have this path but it works
 const {JSLearnings} = require('./dist/JSLearnings');
 const {HTMLLearnings} = require('./dist/HTMLLearnings');
+const {MostlyAdequate} = require('./dist/MostlyAdequateFunc');
 
 const SplitterLayout = require('react-splitter-layout').default;
 const SplitPane = require('react-split-pane').default;
@@ -65,6 +66,9 @@ class ShelfContainer extends React.Component {
           </TabPane>
           <TabPane tab="javascript" key="javascript">
             <JSLearnings/>
+          </TabPane>
+          <TabPane tab="Mostly Adequate" key="mostlyadequate">
+            <MostlyAdequate/>
           </TabPane>
           <TabPane tab="Shelf" key="shelf">
           <div className="split" id="shelf_pane">
