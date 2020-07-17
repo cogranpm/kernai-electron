@@ -6,6 +6,103 @@ const {
 const {Panel} = Collapse;
 const e = React.createElement;
 
+class Functions extends React.Component{
+
+    render() {
+
+        const basic_function = `
+            function square(x){
+                return x * x;
+            }
+        `
+
+        const function_expression = `
+            const square = function(x) { return x * x };
+            var x = square(4);
+            // can give a name to function expression
+            const factorial = function fac(n) { return n < 2 ? 1 : n * fac(n - 1)}
+            console.log(factorial(3))
+        `
+
+        const function_object_examples = `
+            var x = 10;
+
+
+            function createFunction1(){
+                var x = 20;
+                return new Function('return x');
+                // the returned function has NO access to closed over vars when called
+            }
+        
+            function createFunction2(){
+                var x = 20;
+                function f(){
+                    return x;
+                }
+                return f; //inner func CAN access closed over variables
+            }
+        
+            var f1 = createFunction1();
+            console.log(f1());
+            var f2 = createFunction2();
+            console.log(f2());
+        `
+
+        return (
+            <div>
+                <h2>Functions</h2>
+                <p>primitives passed by value</p>
+                <p>objects and arrays are passed by reference</p>
+                <p>{basic_function}</p>
+                <h3>Function expressions</h3>
+                <p>{function_expression}</p>
+                <p>Did you know? Functions are hoisted, but not declarations</p>
+                <p>functions are also objects and have methods and properties</p>
+                <ul>
+                    <li>constructor Function</li>
+                    <li>arguments</li>
+                    <li>caller</li>
+                    <li>length</li>
+                    <li>name</li>
+                    <li>apply(thisArg, [args])</li>
+                    <li>bind(thisArg, [args])</li>
+                    <li>call(thisArg, [args])</li>
+                    <li>toString()</li>
+                </ul>
+                <h3>Function Objects Examples</h3>
+                <p>{function_object_examples}</p>
+                <p>what's next</p>
+            </div>
+        );
+    }
+}
+
+
+class Loops extends React.Component{
+
+    render() {
+
+        const for_loop = `
+            for (let step = 0; step < 5; step++){
+
+            }
+        `
+
+        return (
+            <div>
+                <h3>For Loop</h3>
+                <p>{for_loop}</p>
+                <p>do .. while</p>
+                <p>while</p>
+                <p>break to a label</p>
+                <p>continue</p>
+                <p>continue to label</p>
+                <p>for (let i in someObj)  NOT for arrays</p>
+                <p>for(let i of someArray)</p>
+            </div>
+        )
+    }
+}
 
 class ControlFlow extends React.Component {
 
@@ -52,6 +149,30 @@ class ControlFlow extends React.Component {
 
         `
 
+        const user_exception = `
+            function UserException(message){
+                this.message = message;
+                this.name = 'UserException';
+            }
+
+            //pretty string
+            UserException.prototype.toString = function(){
+                return this.name + this.message;
+            }
+
+            throw new UserException('value to high');
+        `
+
+        const try_catch_finally = `
+            try {
+                ...
+            } catch (e) {
+                log(e);
+            } finally {
+                ... 
+            }
+        `
+
         return (
             <div>
                 <h3>Block Statement</h3>
@@ -82,6 +203,12 @@ class ControlFlow extends React.Component {
                 </ul>
                 <p>{throw_generic}</p>
                 <p>{handle_error_types}</p>
+                <p>throw expression;</p>
+                <h4>User Defined Exception</h4>
+                <p>{user_exception}</p>
+                <p>{try_catch_finally}</p>
+                <p>throw(new Error('my message guys'));</p>
+
             </div>
         )
     }
@@ -293,15 +420,24 @@ class JSLearnings extends React.Component {
                 <Panel header="Introduction" key="1">
                     <p>from the MDN javascript guide</p>
                 </Panel>
-                <Panel header="Encapsulation" key="2">
-                    <Encapsulation></Encapsulation>
+                <Panel header="Loops" key="2">
+                    <Loops></Loops>
                 </Panel>
+
                 <Panel header="Control Flow" key="3">
                     <ControlFlow></ControlFlow>
                 </Panel>
 
                 <Panel header="Grammar and Types" key="4">
                     <Grammar/>
+                </Panel>
+
+                <Panel header="Encapsulation" key="5">
+                    <Encapsulation></Encapsulation>
+                </Panel>
+
+                <Panel header="Functions" key="6">
+                    <Functions></Functions>
                 </Panel>
             </Collapse>
         );
